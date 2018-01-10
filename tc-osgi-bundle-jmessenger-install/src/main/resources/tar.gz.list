@@ -1,0 +1,7 @@
+tc-osgi-equinox-loader-${equinox-loader.version}${snapshot}.tar.gz
+tc-osgi-bundle-utils-${utils.version}${snapshot}.tar.gz
+tc-osgi-bundle-utils-interfaces-${utils.interfaces.version}${snapshot}.tar.gz
+tc-osgi-bundle-spring-wrapper-${spring.wrapper.version}${snapshot}.tar.gz
+tc-osgi-bundle-jmessenger-${jmessenger.version}${snapshot}.tar.gz
+tc-osgi-bundle-gui-utils-${gui.utils.version}${snapshot}.tar.gz
+tc-osgi-bundle-gui-utils-interfaces-${gui.utils.interfaces.version}${snapshot}.tar.gz

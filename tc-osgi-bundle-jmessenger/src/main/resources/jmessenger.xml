@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ConfigurationLibrary
+	xmlns="http://collonville.thomas.fr/tc-osgi-bundle-utils/config-file-schema">
+	<configFiles>
+		<defaultValue>tc-osgi-bundle-gui-utils</defaultValue>
+		<valueType>java.lang.String</valueType>
+		<fieldName>guiUtilsDependencyBundleName</fieldName>
+		<className>org.tc.osgi.bundle.jmessenger.module.activator.JMessengerActivator</className>
+	</configFiles>
+</ConfigurationLibrary>
+
+
