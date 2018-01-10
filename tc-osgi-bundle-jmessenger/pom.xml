@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.tc.osgi.bundle</groupId>
+	<groupId>org.tc.osgi.bundle.jmessenger</groupId>
 	<artifactId>tc-osgi-bundle-jmessenger</artifactId>
 	<name>${project.artifactId}-${project.version}</name>
 	<description>un chat en java</description>
@@ -18,7 +18,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.tc.osgi.bundle</groupId>
+			<groupId>org.tc.osgi.bundle.utils</groupId>
 			<artifactId>tc-osgi-bundle-utils-interfaces</artifactId>
 			<type>bundle</type>
 			<classifier>assembly</classifier>
@@ -26,7 +26,7 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-            <groupId>org.tc.osgi.bundle</groupId>
+            <groupId>org.tc.osgi.bundle.gui-utils</groupId>
             <artifactId>tc-osgi-bundle-gui-utils-interfaces</artifactId>
             <type>bundle</type>
             <classifier>assembly</classifier>

@@ -15,7 +15,7 @@
 
   <modules>
   	<module>tc-osgi-bundle-jmessenger</module>
-  	<module>tc-osgi-bundle-jmessenger-install</module>
+  	<module>tc-osgi-install-jmessenger</module>
   </modules>
   
  
