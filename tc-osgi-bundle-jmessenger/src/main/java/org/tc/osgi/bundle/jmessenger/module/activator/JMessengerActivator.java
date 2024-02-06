@@ -9,7 +9,7 @@ import org.tc.osgi.bundle.jmessenger.module.service.GuiUtilsServiceProxy;
 import org.tc.osgi.bundle.jmessenger.module.service.LoggerServiceProxy;
 import org.tc.osgi.bundle.jmessenger.module.service.PropertyServiceProxy;
 import org.tc.osgi.bundle.utils.interf.conf.exception.FieldTrackingAssignementException;
-import org.tc.osgi.bundle.utils.interf.module.exception.TcOsgiException;
+import org.tc.osgi.bundle.utils.interf.exception.TcOsgiException;
 import org.tc.osgi.bundle.utils.interf.module.service.ILoggerUtilsService;
 import org.tc.osgi.bundle.utils.interf.module.service.IPropertyUtilsService;
 import org.tc.osgi.bundle.utils.interf.module.utils.AbstractTcOsgiActivator;
@@ -17,6 +17,7 @@ import org.tc.osgi.bundle.utils.interf.module.utils.TcOsgiProxy;
 
 /**
  * Activator.java.
+ * 
  * @author Collonville Thomas
  * @version 0.0.1
  */
@@ -30,8 +31,7 @@ public class JMessengerActivator extends AbstractTcOsgiActivator {
 
 	public String getGuiUtilsDependencyBundleName() throws FieldTrackingAssignementException {
 		if (guiUtilsDependencyBundleName == null) {
-			PropertyServiceProxy.getInstance().getXMLPropertyFile(JMessengerPropertyFile.getInstance().getXMLFile()).fieldTraking(this,
-				"guiUtilsDependencyBundleName");
+			PropertyServiceProxy.getInstance().getYamlPropertyFile(JMessengerPropertyFile.getInstance().getYamlFile()).fieldTraking(this, "guiUtilsDependencyBundleName");
 		}
 		return guiUtilsDependencyBundleName;
 	}
@@ -93,7 +93,8 @@ public class JMessengerActivator extends AbstractTcOsgiActivator {
 		// dependances.
 		this.iPropertyUtilsService = new TcOsgiProxy<IPropertyUtilsService>(context, IPropertyUtilsService.class);
 		PropertyServiceProxy.getInstance().setService(this.iPropertyUtilsService.getInstance());
-		this.getIBundleUtilsService().getInstance().getBundleStarter().processOnBundle(context, this.getGuiUtilsDependencyBundleName());
+		// TODO add version au yaml
+		this.getIBundleUtilsService().getInstance().getBundleStarter().processOnBundle(context, this.getGuiUtilsDependencyBundleName(), "0.11.0.SNAPSHOT");
 
 	}
 

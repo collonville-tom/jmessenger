@@ -23,7 +23,7 @@ import org.tc.osgi.bundle.jmessenger.module.service.GuiUtilsServiceProxy;
 import org.tc.osgi.bundle.jmessenger.network.AbstractCommunicationElement;
 import org.tc.osgi.bundle.jmessenger.network.BasicTCPClient;
 import org.tc.osgi.bundle.jmessenger.network.BasicTCPServer;
-import org.tc.osgi.bundle.utils.interf.module.exception.TcOsgiException;
+import org.tc.osgi.bundle.utils.interf.exception.TcOsgiException;
 
 public class ServeurFrame extends JFrame implements IFrameObserver {
 
@@ -96,8 +96,8 @@ public class ServeurFrame extends JFrame implements IFrameObserver {
 			public void actionPerformed(final ActionEvent e) {
 				try {
 					server = new BasicTCPServer(Integer.parseInt(serverport.getText()), ServeurFrame.this);
-					ServeurFrame.this.setTitle("connexion possible on " + InetAddress.getLocalHost().getHostName() + ":"
-						+ Integer.toString(server.getServerSocket().getLocalPort()));
+					ServeurFrame.this
+							.setTitle("connexion possible on " + InetAddress.getLocalHost().getHostName() + ":" + Integer.toString(server.getServerSocket().getLocalPort()));
 					final Thread tServer = new Thread(server);
 					server.setThreadOwner(tServer);
 					tServer.start();
